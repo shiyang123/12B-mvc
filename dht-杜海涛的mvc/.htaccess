@@ -1,0 +1,4 @@
+#开启重写引擎
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f  [NC]
+RewriteRule ^(.*)$  index.php/$1  [L]
