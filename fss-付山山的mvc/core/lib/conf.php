@@ -12,7 +12,6 @@ class conf
          * 2.判断对应配置是否存在
          * 3.配置已经被加载过，缓存一下配置
          */
-            //p(self::$conf);
         if(isset(self::$conf[$file])){
             return self::$conf[$file][$name];                       //判断盖缓存文件是否已经加载配置文件，若缓存过直接返回                             
         } else {

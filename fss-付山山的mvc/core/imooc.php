@@ -7,9 +7,10 @@ namespace core;                //类，建立命名空间
       static public function run()
       {
            // p('ok');
-           // \core\lib\log::init();
-           // \core\lib\log::log('test');
-           $route = new \core\lib\route();   //  引入路由类来触发spl_autoload_register  使访问的地址为xxx.com.index/index
+        
+           // \core\lib\log::log($_SERVER);
+           // \core\lib\log::mysql('mysql');
+           $route = new \core\lib\route();   //引入路由类来触发spl_autoload_register 使访问的地址为xxx.com.index/index
            // p($route);
            $ctrlClass = $route->ctrl;
            $action = $route->action;
@@ -20,6 +21,8 @@ namespace core;                //类，建立命名空间
                 include $ctrlfile;
                 $ctrl=new $cltrlClass();
                 $ctrl->$action();
+                \core\lib\log::init();
+                \core\lib\log::log('ctrl:'.$ctrlClass.'   '.'action:'.$action);
            }else{
                throw new \Exception('找不到控制器'.$ctrlClass);     //不存在抛出异常
            }
@@ -75,8 +78,6 @@ namespace core;                //类，建立命名空间
           }
 
       }
-
-
 
    }
 ?>
