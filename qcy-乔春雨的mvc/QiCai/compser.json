@@ -1,0 +1,20 @@
+{
+	"name":"QiCai PHP",
+	"description":"PHP Fromwork",
+	"type":"Fromwork",
+	"keywords":[
+		"PHP","PHP Fromwork"
+	],
+	"require":{
+		"PHP":">= 5.3.0",
+		"filp/whoops":"*",
+		"symfony/var-dumper":"*",
+		"catfan/medoo":"*"
+	},
+	"repositories": {
+    "packagist": {
+        "type": "composer",
+        "url": "https://packagist.phpcomposer.com"
+    	}
+	}
+}

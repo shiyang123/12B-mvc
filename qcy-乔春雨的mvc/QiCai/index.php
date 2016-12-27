@@ -15,11 +15,21 @@ define('APP',IMOOC.'app\\');
 define('MODULE','app');
 //开启调试模式
 define('DEBUG',TRUE);
+//引入composer错误处理
+include "vendor/autoload.php";
+
 if(DEBUG){
+	$whoops = new \Whoops\Run;
+	$errorTitle = '框架出错了';
+	$option = new \Whoops\Handler\PrettyPageHandler();
+	$option->setPageTitle($errorTitle);
+	$whoops->pushHandler($option);
+	$whoops->register();
 	ini_set('display_error','On');
 }else{
 	ini_set('display_error','Off');
 }
+// dump($_SERVER);
 //加载函数库
 include CORE.'common\function.php';
 //加载核心文件
