@@ -1,22 +1,28 @@
 <?php
 namespace app\ctrl;
+use core\lib\model;
 class indexCtrl extends \core\imooc
 {
 	public function index()
 	{
-		// p('it is index');
-		// $model = new \core\lib\model();
-		// $sql = 'SELECT * FROM students';
-		// $res = $model->query($sql);
-		// p($res->fetchAll());
-		// $temp = \core\lib\conf::get('CTRL','route');
-		// $temp = \core\lib\conf::get('ACTION','route');
-		$temp = new \core\lib\model();
-		print_r($temp);
-		$data = 'hello world!';
-		$title = '哈哈';
+		$model = new \app\model\studentsModel();
+		$where = ['id'=>'10'];
+		$data = ['sex'=>'1'];
+		$res = $model->upd($data,$where);
+		// dump($res);
+		$data = 'Hello World!';
+		$title = '柒彩';
 		$this->assign('data',$data);
 		$this->assign('title',$title);
 		$this->display('index.html');
+	}
+
+	public function test()
+	{
+		$data = 'Hello World!';
+		$title = '柚子';
+		$this->assign('data',$data);
+		$this->assign('title',$title);
+		$this->display('test.html');
 	}
 }
