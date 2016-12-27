@@ -63,5 +63,6 @@ class Template
 			include(ROOT.DS.'application'.DS.'views'.DS.'footer.php');
 		}
 
+		
 	}
 }

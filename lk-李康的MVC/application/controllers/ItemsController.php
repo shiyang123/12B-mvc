@@ -10,7 +10,7 @@ class ItemsController extends Controller {
        }
        function add() {
            $todo = $_POST['todo'];
-           $items = $this->Item->query('insert into items (item_name) values (\''.mysql_real_escape_string($todo).'\')');
+           $items = $this->Item->query("insert into items (item_name) values ('".$todo."')");
            $this->view('add',['title'=>'Success - My Todo List App','todo'=>$items]);
        }
        function delete($id) {
