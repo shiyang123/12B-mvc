@@ -7,21 +7,23 @@ namespace app\ctrl;
        public function index()
        {  
         // p(456); 
-          // header("content-type:text/html;charset=utf8");      
+          header("content-type:text/html;charset=utf8");      
           // p('this is a index sAS');
            // $temp=\core\lib\conf::get('CTRL','route');               //加载配置类
            //    $temp=\core\lib\conf::get('ACTION','route');               //加载配置类
            $temp = new \core\lib\model();
-           print_r($temp);
-          //  $model = new \core\lib\model();                          //实例化
-          //  $sql="select * from user";
-          //  $arr=$model->query($sql);
-          //  // p($arr->fetchAll());
-          // $title = '这是视图文件';
-          // $this->assign('title',$title);
-          // $data = 'hello world';
-          // $this->assign('data',$data);
-          // $this->display('index/index.html');
+           // print_r($temp);
+           $model = new \core\lib\model();                          //实例化
+           $sql="select * from user";
+           $arr=$model->query($sql);
+           // p($arr->fetchAll());
+          $title = '这是视图文件';
+          $this->assign('title',$title);
+          $data = 'hello world';
+          // \core\lib\log::init();                                //将数据写入日志
+          // \core\lib\log::log('data:'.$data);
+          $this->assign('data',$data);
+          $this->display('index/index.html');
 
        }
    }

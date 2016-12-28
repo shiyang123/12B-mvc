@@ -10,12 +10,12 @@ use core\lib\conf;
               // $username='root';
               // $passwd='root';
               $database = conf::all('database');
-              p($database);
+              // p($database);
              try{
                 parent::__construct($database['dsn'],$database['username'],$database['password']);
              } catch(\PDOException $e) {
 
-                 p($e->getMessage());                           //连接不上抛出异常
+                 // p($e->getMessage());                           //连接不上抛出异常
              }
 
          }

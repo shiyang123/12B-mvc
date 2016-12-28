@@ -1,0 +1,22 @@
+{
+    "name": "IMOOC.PHP",
+    "description": "PHP Framework",
+    "type": "Framework",
+    "keywords": [
+        "PHP","PHP Framework"
+    ],
+    "require": {
+        "php": ">= 5.3.0",
+        //第三方错误类库
+        "filp/whoops": "*",
+        //输出第三方类库
+        "symfony/var-dumper":"*"
+    },
+    //composer中国镜像
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}

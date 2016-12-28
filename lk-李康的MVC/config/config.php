@@ -20,5 +20,5 @@ define('DB_NAME','test');			//数据库名
 
 define('DB_USER','root');				//连接数据库用户名
 
-define('DB_PASSWORD','root');			//连接数据库密码
+define('DB_PASSWORD','rootroot');			//连接数据库密码
 

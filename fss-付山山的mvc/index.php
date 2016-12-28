@@ -6,6 +6,7 @@
 	*3.启动框架
 	*/
 	define('MVC',str_replace('\\', '/' , __DIR__));          //获取当前框架所在目录,
+	
 	define('CORE',MVC.'/core');                              //核心文件
 	define('APP',MVC.'/app');
 	define('DEBUG',true);                                    //开启调试模式

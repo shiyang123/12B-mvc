@@ -20,6 +20,7 @@ class SQLQuery
 	 */
 	function connect($address,$account,$pwd,$name){
 		$this->_dbHandle = @mysql_connect($address,$account,$pwd);
+		mysql_query('set names utf8');
 		if($this->_dbHandle != 0){
 			if(mysql_select_db($name,$this->_dbHandle)){
 
@@ -78,8 +79,8 @@ class SQLQuery
 	 * @return [type]                [description]
 	 */
 	function query($query,$singleResult = 0){
+		 //echo $query;
 		$this->_result = mysql_query($query,$this->_dbHandle);
-
 		if(preg_match("/select/i",$query)){
 
 			$result = array();

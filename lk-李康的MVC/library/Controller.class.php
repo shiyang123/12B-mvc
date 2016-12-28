@@ -46,3 +46,4 @@ class Controller
 		$this->_template->render();
 	}
 }
+
