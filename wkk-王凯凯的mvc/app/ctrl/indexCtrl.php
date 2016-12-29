@@ -20,9 +20,9 @@ class indexCtrl extends \core\framework
 		//print_r($temp);
 
 		/*传值跳转到视图层*/
-		// $data = 'Hello God';
-		// $this->assign('data',$data);
-		// $this->display('/index.html');
+		$data = 'Hello God';
+		$this->assign('data',$data);
+		$this->display('/index.html');
 	}
 }
 ?>

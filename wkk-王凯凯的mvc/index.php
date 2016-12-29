@@ -11,13 +11,15 @@ define('APP',FRAMEWORK.'/app');//控制器模型文件
 define('MODULE','app');
 
 define('DEBUG',true);//调试模式
-
+//include "vendor/autoload.php";
 if (DEBUG){
+	//$whoops = new\Whoops\Run;
+	//$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+	//$whoops->register();
 	ini_set('display_error','On');
 } else {
 	ini_set('display_error','Off');
 }
-
 include CORE.'/common/function.php';//加载文件
 include CORE.'/framework.php';//核心文件
 //判断

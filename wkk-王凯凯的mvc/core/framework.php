@@ -21,6 +21,7 @@ class framework
 			include $ctrlfile;
 			$ctrl = new $cltrlClass();
 			$ctrl->$action();
+			\core\lib\log::log('ctrl:'.$ctrlClass.'   '.'action:'.$action);
 		} else {
 			throw new \Exception('找不到控制器',$ctrlClass);
 		}

@@ -18,10 +18,10 @@ class log
 		//echo $class;die;
 		self::$class = new $class;
 	}
-	static public function log($name)
+	static public function log($name,$file = 'log')
 	{	
 		//echo $name;die;
-		self::$class->log($name);
+		self::$class->log($name,$file);
 	}
 }
 ?>
